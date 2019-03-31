@@ -110,7 +110,7 @@ def bulid_dataset(ids,data,labels,dict_word2index,text_maxlen,num_classes):
         while pad_num>0:
             new_line.append(1)
             pad_num-=1
-        datasets.append(new_line[:max_text_len])
+        datasets.append(new_line[:text_maxlen])
     return new_ids,np.array([datasets],dtype=np.int64),np.array(new_labels, dtype=np.int64)
 
 
